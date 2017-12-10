@@ -8,22 +8,23 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.6829268292682927, 0.9902439024390244" focusTraversable="true" orientation="VERTICAL" prefHeight="412.0" prefWidth="636.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<SplitPane dividerPositions="0.7297297297297297, 0.9916839916839917" focusTraversable="true" orientation="VERTICAL" prefHeight="483.0" prefWidth="636.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mp3player.FXMLDocumentController">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="598.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="634.0">
       <children>
-        <Rectangle arcHeight="0.0" arcWidth="43.0" fill="#ccfff9" height="57.0" layoutX="0.0" layoutY="0.0" strokeType="INSIDE" width="217.197265625">
+        <Button fx:id="close" layoutX="603.0" layoutY="-1.0" minHeight="21.85992431640625" onAction="#exit" prefHeight="21.85992431640625" prefWidth="31.0" />
+        <Rectangle arcHeight="0.0" arcWidth="43.0" fill="#ccfff9" height="57.0" layoutX="0.0" layoutY="33.0" strokeType="INSIDE" width="217.19716562500253">
           <stroke>
             <Color blue="0.600" green="0.239" red="0.000" fx:id="x1" />
           </stroke>
         </Rectangle>
-        <Rectangle arcHeight="0.0" arcWidth="43.0" height="57.0" layoutX="216.0" layoutY="0.0" stroke="$x1" strokeType="INSIDE" strokeWidth="0.8" width="217.197265625">
+        <Rectangle arcHeight="0.0" arcWidth="43.0" height="57.0" layoutX="217.0" layoutY="33.0" stroke="$x1" strokeType="INSIDE" strokeWidth="0.8" width="217.197265625">
           <fill>
             <Color blue="0.976" green="1.000" red="0.800" fx:id="x2" />
           </fill>
         </Rectangle>
-        <Rectangle arcHeight="0.0" arcWidth="43.0" fill="$x2" height="57.00000762939453" layoutX="433.0" layoutY="0.0" stroke="$x1" strokeType="INSIDE" strokeWidth="0.7" width="201.0" />
-        <Text fill="#ba99ff" layoutX="90.0" layoutY="36.0" scaleX="3.0143396394437723" scaleY="2.662423999340135" stroke="BLACK" strokeType="CENTERED" strokeWidth="0.2" text="Library">
+        <Rectangle arcHeight="0.0" arcWidth="43.0" fill="$x2" height="57.00000762939453" layoutX="433.0" layoutY="33.0" stroke="$x1" strokeType="INSIDE" strokeWidth="0.7" width="201.0" />
+        <Text fill="#ba99ff" layoutX="90.0" layoutY="65.0" scaleX="3.0143396394437723" scaleY="2.662423999340135" stroke="BLACK" strokeType="CENTERED" strokeWidth="0.2" text="Library">
           <font>
             <Font name="Arial" size="12.0" fx:id="x3" />
           </font>
@@ -33,8 +34,10 @@
             <Color blue="1.000" green="0.600" red="0.729" fx:id="x4" />
           </fill>
         </Text>
-        <Text fill="$x4" font="$x3" fontSmoothingType="LCD" layoutX="518.0" layoutY="32.0" scaleX="2.83752566900751" scaleY="2.204093768736341" stroke="BLACK" strokeType="CENTERED" strokeWidth="0.2" text="About" />
-        <Text fill="$x4" font="$x3" fontSmoothingType="LCD" layoutX="296.0" layoutY="32.0" scaleX="2.44994177299606" scaleY="2.662423999340135" stroke="BLACK" strokeType="CENTERED" strokeWidth="0.2" text="Queues" />
+        <Text fill="$x4" font="$x3" fontSmoothingType="LCD" layoutX="514.0" layoutY="65.0" scaleX="2.83752566900751" scaleY="2.707438717590852" stroke="BLACK" strokeType="CENTERED" strokeWidth="0.2" text="About" />
+        <Text fill="$x4" font="$x3" fontSmoothingType="LCD" layoutX="296.0" layoutY="63.0" scaleX="2.44994177299606" scaleY="2.662423999340135" stroke="BLACK" strokeType="CENTERED" strokeWidth="0.2" text="Queues" />
+        <Line endX="-123.0" endY="21.0" layoutX="748.0" layoutY="-16.0" startX="-137.00048828125" startY="32.00048828125" stroke="RED" strokeWidth="3.0" />
+        <Line endX="-150.0" endY="20.0" layoutX="762.0" layoutY="-15.0" startX="-137.00048828125" startY="32.00048828125" stroke="RED" strokeWidth="3.0" />
       </children>
     </AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="634.0">
