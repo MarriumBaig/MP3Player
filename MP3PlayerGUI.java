@@ -1,6 +1,10 @@
 
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileFilter;
@@ -12,18 +16,18 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * @author Syed Muhammad Maaz
  */
 public class MP3PlayerGUI extends javax.swing.JFrame {
-
    
+    MainClass mc=new MainClass();
     /**
      * Creates new form MP3PlayerGUI
      */
     public MP3PlayerGUI() {
         initComponents();
         
-        
-        
-        
+        mc.Initialize();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,16 +40,107 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
 
         jButton6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        Play = new javax.swing.JButton();
+        Miniize = new javax.swing.JButton();
+        Close = new javax.swing.JButton();
+        Repeat = new javax.swing.JButton();
+        Stop = new javax.swing.JButton();
+        Pause = new javax.swing.JButton();
+        Shuffle = new javax.swing.JButton();
+        Remove = new javax.swing.JButton();
+        Add = new javax.swing.JButton();
+        Display = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
 
         jButton6.setText("jButton6");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background.png"))); // NOI18N
         jLabel2.setText("background");
 
+        jButton1.setText("jButton1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(553, 735));
+        setMinimumSize(new java.awt.Dimension(553, 735));
         getContentPane().setLayout(null);
+
+        Play.setText("Play");
+        Play.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlayActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Play);
+        Play.setBounds(200, 100, 120, 110);
+
+        Miniize.setText("minimize");
+        Miniize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MiniizeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Miniize);
+        Miniize.setBounds(431, 0, 30, 40);
+
+        Close.setText("close");
+        Close.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CloseActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Close);
+        Close.setBounds(470, 0, 30, 40);
+
+        Repeat.setText("Repeat");
+        Repeat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RepeatActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Repeat);
+        Repeat.setBounds(20, 130, 50, 50);
+
+        Stop.setText("Stop");
+        Stop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StopActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Stop);
+        Stop.setBounds(90, 120, 80, 80);
+
+        Pause.setText("Pause");
+        Pause.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PauseActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Pause);
+        Pause.setBounds(330, 120, 80, 80);
+
+        Shuffle.setText("Shuffle");
+        getContentPane().add(Shuffle);
+        Shuffle.setBounds(430, 130, 50, 50);
+
+        Remove.setText("Remove");
+        getContentPane().add(Remove);
+        Remove.setBounds(340, 360, 90, 80);
+
+        Add.setText("Add");
+        Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Add);
+        Add.setBounds(330, 260, 100, 90);
+
+        Display.setText("Display ");
+        getContentPane().add(Display);
+        Display.setBounds(20, 50, 460, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -57,8 +152,54 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 500, 730);
 
+        jButton9.setText("Play");
+        getContentPane().add(jButton9);
+        jButton9.setBounds(190, 100, 120, 110);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseActionPerformed
+           System.exit(0);        
+// TODO add your handling code here:
+    }//GEN-LAST:event_CloseActionPerformed
+
+    private void RepeatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RepeatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RepeatActionPerformed
+
+    private void PauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PauseActionPerformed
+        mc.Pause();
+    }//GEN-LAST:event_PauseActionPerformed
+
+    private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddActionPerformed
+
+    private void StopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopActionPerformed
+        mc.Stop();
+    }//GEN-LAST:event_StopActionPerformed
+
+    private void MiniizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiniizeActionPerformed
+        // TODO add your handling code here:
+        setState(JFrame.ICONIFIED);
+    }//GEN-LAST:event_MiniizeActionPerformed
+
+    private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
+        Node temp = mc.d.root;
+        while (temp != null)
+        {
+           mc.Play(temp.data.getPath());
+           long t = mc.songTotalLength*1000;
+            try {
+                Thread.sleep(t);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(MP3PlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+           temp = temp.next;
+        }
+        
+    }//GEN-LAST:event_PlayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,7 +237,19 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Add;
+    private javax.swing.JButton Close;
+    public static javax.swing.JLabel Display;
+    private javax.swing.JButton Miniize;
+    private javax.swing.JButton Pause;
+    private javax.swing.JButton Play;
+    private javax.swing.JButton Remove;
+    private javax.swing.JButton Repeat;
+    private javax.swing.JButton Shuffle;
+    private javax.swing.JButton Stop;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
